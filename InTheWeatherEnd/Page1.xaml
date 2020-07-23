@@ -1,0 +1,44 @@
+﻿<Page x:Class="InTheWeatherEnd.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InTheWeatherEnd"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <DockPanel>
+            <DataGrid x:Name="datagridMy" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="id" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                    <DataGridTextColumn Header="time" Binding="{Binding time}"/>
+                    <DataGridTextColumn Header="weather" Binding="{Binding weather}"/>
+                    <DataGridTextColumn Header="windDeg" Binding="{Binding windDeg}"/>
+                    <DataGridTextColumn Header="middleTemp" Binding="{Binding middleTemp}"/>
+                    <DataGridTextColumn Header="windSpeed" Binding="{Binding windSpeed}"/>
+                    <DataGridTextColumn Header="humidity" Binding="{Binding humidity}"/>
+                    <DataGridTextColumn Header="pressure" Binding="{Binding pressure}"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="action"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="insertbtn" Content="insert" Click="insertbtn_Click"/>
+                                    <Button x:Name="updatebtn" Content="update" Click="updatebtn_Click"/>
+                                    <Button x:Name="deletebtn" Content="delete" Click="deletebtn_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+    </Grid>
+</Page>

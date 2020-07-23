@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InTheWeatherEnd"
+        xmlns:Drawing2D="clr-namespace:System.Drawing.Drawing2D;assembly=System.Drawing" x:Class="InTheWeatherEnd.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="932">
+    <Grid x:Name="weatherGR" Background="#FF18C0FF" Margin="0" >
+
+
+        
+        <Button x:Name="BweatherNow" Content="погода сейчас" HorizontalAlignment="Left" VerticalAlignment="Top" Width="132" Height="32" Click="BweatherNow_Click"/>
+        <Button x:Name="BweatherInstall" Content="установить погоду" HorizontalAlignment="Left" Margin="132,0,0,0" VerticalAlignment="Top" Width="132" Height="32" Click="BweatherInstall_Click"/>
+        <Frame x:Name="Main" Margin="0,32,0,0"/>
+    </Grid>
+
+
+</Window>
